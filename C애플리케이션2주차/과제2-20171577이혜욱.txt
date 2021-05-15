@@ -1,0 +1,150 @@
+1번 실습문제
+
+#include<stdio.h>
+#define VOLUME(x,y) (3.14*(x)*(x)*(y))
+void main()
+{
+	int r, h;
+	double bupi;
+	printf("밑원의 반지름과 높이를 입력하시오\n");
+	scanf_s("%d %d", &r, &h);
+	bupi = VOLUME(r, h);
+	printf("부피 : %lf",bupi);
+
+}
+
+2번 실습문재
+#include<stdio.h>
+
+int main()
+{
+
+	char c, c1;
+	printf("아스키 값을 입력하시오 : ");
+	scanf_s("% c % c", &c,1, &c1,1);
+	
+	printf("그 다음 문자 : %c %c", ++c, ++c1);
+	return 0;
+}
+
+3번 실습문제
+
+#include<stdio.h>
+
+
+void main()
+{
+	double a, b;
+	int rest;
+	printf("실수 2개를 입력하시오.\n");
+	scanf_s("%lf %lf", &a, &b);
+	
+	rest = int(a) * int(b);
+
+	printf("결과 :%d", rest);
+
+
+}
+
+4번 실습문제
+
+#include<stdio.h>
+
+
+void main()
+{
+	int a, b, c, max;
+	printf("세 수를 입력하시오\n");
+	scanf_s("%d %d %d", &a, &b, &c);
+
+	max = a >= b ? (a >= c ? a : c) : (b >= c ? b : c);
+
+	printf("최댓값 : %d\n", max);
+
+}
+
+실습 5번 문제
+
+#include<stdio.h>
+
+void main()
+{
+	int weight;
+	double height, bmi;
+
+	printf("몸무게와 키를 입력하시오.\n");
+	scanf_s("%d %lf", &weight, &height);
+	bmi = weight / ((height / 100) * (height / 100));
+
+	printf("BMI : %.1lf\n", bmi);
+
+
+}
+
+실습 6번 문제
+
+#include<stdio.h>
+
+void main()
+{
+	int a, b, c, money, rest;
+
+	printf("음식값을 입력하세요\n");
+	scanf_s("%d", &money);
+
+	a = b = c = ((money / 3) / 1000 * (1000));
+	rest = money - (a + b + c);
+
+	rest == 1000 ? a += rest : rest;
+	rest == 2000 ? a += (rest / 2), b += (rest / 2) : rest;
+	rest < 1000 ? a += rest : rest;
+	rest > 1000 & rest < 2000 ? a += 1000, b += (rest - 1000) : rest;
+	rest > 2000 ? a += 1000, b += 1000, c += (rest - 2000) : rest;
+
+	printf("%d원, %d원, %d원", a, b, c);
+
+
+}
+
+실습 7번 문제
+
+#include<stdio.h>
+
+void main()
+{
+    char c;
+    int i, n;
+    int bit = 0x80;
+    printf("아스키 코드를 입력하시오.\n");
+    scanf_s("%c", &c,1);
+
+    n = c;
+
+    printf("%d\n", n);
+    i = 7;
+    bit = n >> i & 1;
+    printf("%d", bit);
+    i = 6;
+    bit = n >> i & 1;
+    printf("%d", bit);
+    i = 5;
+    bit = n >> i & 1;
+    printf("%d", bit);
+    i = 4;
+    bit = n >> i & 1;
+    printf("%d", bit);
+    i = 3;
+    bit = n >> i & 1;
+    printf("%d", bit);
+    i = 2;
+    bit = n >> i & 1;
+    printf("%d", bit);
+    i = 1;
+    bit = n >> i & 1;
+    printf("%d", bit);
+    i = 0;
+    bit = n >> i & 1;
+    printf("%d", bit);
+
+}
+

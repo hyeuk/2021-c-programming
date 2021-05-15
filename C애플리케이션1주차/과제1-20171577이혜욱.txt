@@ -1,0 +1,89 @@
+1번
+
+// 화씨 90도는 섭씨 몇 도 인지 구하시오(단, C = (F-32)/1.8)
+
+#include <stdio.h>
+
+void main()
+{
+	double f = 90.0, c;
+
+	c = (f - 32) / 1.8;
+
+	printf("화씨 %lf = 섭씨 %lf \n", f, c);
+
+}
+
+2번
+
+// 원주율(3.14)을 매크로상수로 선언하고, 반지름이 6400km인 지구의 둘레길이를 구하시오.
+//단 , 원주의 크기 = 2 * n * r)
+
+#include <stdio.h>
+
+#define PI 3.14
+
+void main()
+{
+	int r = 6400;
+	double dule;
+
+	dule = 2 * PI * r;
+	printf("지구의 둘레 = %.0lf km \n", dule);
+}
+
+3번
+
+// 원주율(3.14)을 상수(const)로 선언하고 , 반지름이 6400km인 지구의 둘레길이를 구하시오.
+//(단 , 원주의 크기 = 2 * n * r)
+
+#include <stdio.h>
+
+void main()
+{
+	const double PI = 3.14;
+	int r = 6400;
+	double dule;
+
+	dule = 2 * PI * r;
+	printf("지구의 둘레 = %.0lf km \n", dule);
+}
+
+4번
+
+// 우리나라 국내총생산액을 구하시오. 일인당 국내총생산은33000달러이고,우리나라인구는 52,000,000명이다.(오버플로주의!)
+
+#include<stdio.h>
+
+void main()
+{
+
+	double p = 52000000, gp = 33000, tgp;
+
+	tgp = gp * p;
+
+	printf("국내총생산액 = %.0lf달러 \n", tgp);
+
+
+}
+
+5번
+
+// 1000만원을 예탁하여 2년후 받게 되는 총액을 계산하시오. (연이율은 4%)
+// (1000 * 1.04) * 1.04
+#include<stdio.h>
+
+
+void main()
+{
+	int s = 1000;
+
+	double h = 1.04, t;
+
+	t = (s * h) * h;
+
+	printf("2년후 받게 되는 총액 = %.1lf만원 \n", t);
+
+	
+
+}
